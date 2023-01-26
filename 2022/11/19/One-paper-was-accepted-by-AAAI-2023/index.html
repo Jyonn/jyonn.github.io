@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Continual Graph Convolutional Networks for Text ClassificationQijiong LIU*, Tiandeng WU*, Yao HUANG, Yi CAO, Xiao-Ming WU#, and Jiandong DING#*Equal contribution (co-first authors). Author ordering de">
+<meta property="og:type" content="article">
+<meta property="og:title" content="One paper was accepted by AAAI 2023">
+<meta property="og:url" content="https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/index.html">
+<meta property="og:site_name" content="Jyonn Space">
+<meta property="og:description" content="Continual Graph Convolutional Networks for Text ClassificationQijiong LIU*, Tiandeng WU*, Yao HUANG, Yi CAO, Xiao-Ming WU#, and Jiandong DING#*Equal contribution (co-first authors). Author ordering de">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-19T08:04:15.000Z">
+<meta property="article:modified_time" content="2023-01-26T11:17:14.731Z">
+<meta property="article:author" content="Jyonn LIU">
+<meta property="article:tag" content="research">
+<meta property="article:tag" content="paper">
+<meta property="article:tag" content="text classification">
+<meta property="article:tag" content="natural language processing">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>One paper was accepted by AAAI 2023</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/resume/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/projects/">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2023/01/25/One-paper-was-accepted-by-WWW-2023/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2022/08/17/One-paper-was-accepted-by-COLING-2022/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&text=One paper was accepted by AAAI 2023"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&title=One paper was accepted by AAAI 2023"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&is_video=false&description=One paper was accepted by AAAI 2023"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=One paper was accepted by AAAI 2023&body=Check out this article: https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&title=One paper was accepted by AAAI 2023"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&title=One paper was accepted by AAAI 2023"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&title=One paper was accepted by AAAI 2023"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&title=One paper was accepted by AAAI 2023"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&name=One paper was accepted by AAAI 2023&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&t=One paper was accepted by AAAI 2023"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Continual-Graph-Convolutional-Networks-for-Text-Classification"><span class="toc-number">1.</span> <span class="toc-text">Continual Graph Convolutional Networks for Text Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-number">2.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Citation"><span class="toc-number">3.</span> <span class="toc-text">Citation</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        One paper was accepted by AAAI 2023
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Jyonn LIU</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-11-19T08:04:15.000Z" itemprop="datePublished">2022-11-19</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/natural-language-processing/" rel="tag">natural language processing</a>, <a class="tag-link-link" href="/tags/paper/" rel="tag">paper</a>, <a class="tag-link-link" href="/tags/research/" rel="tag">research</a>, <a class="tag-link-link" href="/tags/text-classification/" rel="tag">text classification</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Continual-Graph-Convolutional-Networks-for-Text-Classification"><a href="#Continual-Graph-Convolutional-Networks-for-Text-Classification" class="headerlink" title="Continual Graph Convolutional Networks for Text Classification"></a>Continual Graph Convolutional Networks for Text Classification</h2><p><span style="font-size: small"><span style="color: bisque"><strong>Qijiong LIU</strong></span><sup>*</sup>, Tiandeng WU<sup>*</sup>, Yao HUANG, Yi CAO, Xiao-Ming WU<sup>#</sup>, and Jiandong DING<sup>#</sup></span><br><span style="font-size: smaller; color: #c9cacc80; font-style: italic"><sup>*</sup>Equal contribution (co-first authors). Author ordering determined by dice rolling.</span><br><a target="_blank" rel="noopener" href="https://github.com/Jyonn/ContGCN">[Code]</a></p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>To capture global non-consecutive and long-distance semantic information, graph convolutional network (GCN) has been widely used for text classification. While GCN-based methods have achieved great success in offline evaluations, they usually construct fixed document-token graphs and cannot perform inference on new documents. It is still a challenge to apply GCNs in online systems which need to infer continual text data. In this work, we present a Continual GCN model, short as ContGCN, to generalize inferences from observed documents to unobserved documents. Concretely, we propose a novel <em>global-token-local-document</em> paradigm to dynamically update the document-token graph in every batch for any online system during both training and testing phases. Moreover, we design an occurrence memory module and a self-supervised contrastive learning objective to update the proposed ContGCN in any online system in a label-free manner. Extensive offline experiments conducted on five public datasets demonstrate that our proposed ContGCN can significantly improve inference quality. A 3-month A&#x2F;B test on our internal online system shows ContGCN achieves 8.86% performance gain compared with state-of-the-art methods.</p>
+<h2 id="Citation"><a href="#Citation" class="headerlink" title="Citation"></a>Citation</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@inproceedings&#123;wu2023contgcn,</span><br><span class="line">    title = &quot;Continual Graph Convolutional Networks for Text Classification&quot;,</span><br><span class="line">    author = &quot;Wu, Tiandeng  and</span><br><span class="line">      Liu, Qijiong  and</span><br><span class="line">      Cao, Yi  and</span><br><span class="line">      Huang, Yao  and</span><br><span class="line">      Wu, Xiaoming and</span><br><span class="line">      Ding, Jiandong&quot;,</span><br><span class="line">    booktitle = &quot;Proceedings of the 37th AAAI Conference on Artificial Intelligence&quot;,</span><br><span class="line">    month = feb,</span><br><span class="line">    year = &quot;2023&quot;,</span><br><span class="line">    address = &quot;Washington, DC, United States&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/resume/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Continual-Graph-Convolutional-Networks-for-Text-Classification"><span class="toc-number">1.</span> <span class="toc-text">Continual Graph Convolutional Networks for Text Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-number">2.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Citation"><span class="toc-number">3.</span> <span class="toc-text">Citation</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&text=One paper was accepted by AAAI 2023"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&title=One paper was accepted by AAAI 2023"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&is_video=false&description=One paper was accepted by AAAI 2023"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=One paper was accepted by AAAI 2023&body=Check out this article: https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&title=One paper was accepted by AAAI 2023"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&title=One paper was accepted by AAAI 2023"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&title=One paper was accepted by AAAI 2023"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&title=One paper was accepted by AAAI 2023"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&name=One paper was accepted by AAAI 2023&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://liu.qijiong.work/2022/11/19/One-paper-was-accepted-by-AAAI-2023/&t=One paper was accepted by AAAI 2023"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2023
+    Jyonn LIU
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/resume/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/projects/">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
