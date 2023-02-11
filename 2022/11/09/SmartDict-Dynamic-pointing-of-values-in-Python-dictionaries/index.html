@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="IntroductionChain assignment of dictionary values, which can be used to reduce redundancy in configuration dictionaries. Installation1pip install smartdict  UsageAssuming the following configuration d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SmartDict: Dynamic pointing of values in Python dictionaries">
+<meta property="og:url" content="https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/index.html">
+<meta property="og:site_name" content="Jyonn Space">
+<meta property="og:description" content="IntroductionChain assignment of dictionary values, which can be used to reduce redundancy in configuration dictionaries. Installation1pip install smartdict  UsageAssuming the following configuration d">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-09T08:16:13.000Z">
+<meta property="article:modified_time" content="2023-02-11T21:43:17.211Z">
+<meta property="article:author" content="Jyonn LIU">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="package">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>SmartDict: Dynamic pointing of values in Python dictionaries</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/resume/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/projects/">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2022/11/19/One-paper-was-accepted-by-AAAI-2023/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2022/11/07/Oba-Converting-a-Python-iterable-object-to-an-attribute-class/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&text=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&title=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&is_video=false&description=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=SmartDict: Dynamic pointing of values in Python dictionaries&body=Check out this article: https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&title=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&title=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&title=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&title=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&name=SmartDict: Dynamic pointing of values in Python dictionaries&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&t=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-number">2.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Usage"><span class="toc-number">3.</span> <span class="toc-text">Usage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Normal-String-Referencing"><span class="toc-number">3.1.</span> <span class="toc-text">Normal String Referencing ${}</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Full-Match-Referencing"><span class="toc-number">3.2.</span> <span class="toc-text">Full Match Referencing ${}$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Summon-Magic"><span class="toc-number">3.3.</span> <span class="toc-text">Summon Magic</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#License"><span class="toc-number">4.</span> <span class="toc-text">License</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Links"><span class="toc-number">5.</span> <span class="toc-text">Links</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        SmartDict: Dynamic pointing of values in Python dictionaries
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Jyonn LIU</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-11-09T08:16:13.000Z" itemprop="datePublished">2022-11-09</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/package/" rel="tag">package</a>, <a class="tag-link-link" href="/tags/python/" rel="tag">python</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Chain assignment of dictionary values, which can be used to reduce redundancy in configuration dictionaries.</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install smartdict</span><br></pre></td></tr></table></figure>
+
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>Assuming the following configuration dictionary exists:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;dataset&quot;</span><span class="punctuation">:</span> <span class="string">&quot;spotify&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;load&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;train_path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;~/data/spotify/train&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;dev_path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;~/data/spotify/dev&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;test_path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;~/data/spotify/test&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;network&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;num_hidden_layers&quot;</span><span class="punctuation">:</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;num_attention_heads&quot;</span><span class="punctuation">:</span> <span class="number">8</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;hidden_size&quot;</span><span class="punctuation">:</span> <span class="number">64</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;store&quot;</span><span class="punctuation">:</span> <span class="string">&quot;checkpoints/spotify/3L8H/&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>It can be observed that many paths such as <code>train_path</code> are related to the dataset name dataset, and the store storage path is related to the dataset name, network structure, and so on. Additionally, if the dataset or network structure is changed, the configuration dictionary needs to be modified complexly.</p>
+<p>One solution is to handle the redundant information in Python code. For example, the value of <code>train_path</code> is directly assigned to train, in the code as follows:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[<span class="string">&#x27;load&#x27;</span>][<span class="string">&#x27;train_path&#x27;</span>] = os.path.join(<span class="string">&#x27;~&#x27;</span>, <span class="string">&#x27;data&#x27;</span>, data[<span class="string">&#x27;dataset&#x27;</span>], data[<span class="string">&#x27;load&#x27;</span>][<span class="string">&#x27;train_path&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<p>However, this method is not flexible enough. As the number of configuration properties increases, the amount of code required also increases linearly, making the preprocessing of configuration data slightly cumbersome.</p>
+<h3 id="Normal-String-Referencing"><a href="#Normal-String-Referencing" class="headerlink" title="Normal String Referencing ${}"></a>Normal String Referencing <code>$&#123;&#125;</code></h3><p>We propose to construct the dictionary values as dynamic data, for example:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;dataset&quot;</span><span class="punctuation">:</span> <span class="string">&quot;spotify&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;load&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;base_path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;~/data/$&#123;dataset&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;train_path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;load.base_path&#125;/train&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;dev_path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;load.base_path&#125;/dev&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;test_path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;load.base_path&#125;/test&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;network&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;num_hidden_layers&quot;</span><span class="punctuation">:</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;num_attention_heads&quot;</span><span class="punctuation">:</span> <span class="number">8</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;hidden_size&quot;</span><span class="punctuation">:</span> <span class="number">64</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;store&quot;</span><span class="punctuation">:</span> <span class="string">&quot;checkpoints/$&#123;dataset&#125;/$&#123;network.num_hidden_layers&#125;L$&#123;network.num_attention_heads&#125;H/&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>The value of <code>train_path</code> is dynamically constructed by referencing the value of <code>base_path</code> and <code>train</code>, and the value of <code>store</code> is dynamically constructed by referencing the value of <code>dataset</code>, <code>network.num_hidden_layers</code>, and <code>network.num_attention_heads</code>.</p>
+<p>The above configuration dictionary can be processed as follows:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># solution 1</span></span><br><span class="line"><span class="keyword">import</span> smartdict</span><br><span class="line">data = smartdict.parse(data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># solution 2</span></span><br><span class="line"><span class="keyword">from</span> smartdict <span class="keyword">import</span> DictCompiler</span><br><span class="line">compiler = DictCompiler(data)</span><br><span class="line">data = compiler.parse()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(data[<span class="string">&#x27;load&#x27;</span>][<span class="string">&#x27;base_path&#x27;</span>])  <span class="comment"># =&gt; ~/data/spotify</span></span><br><span class="line"><span class="built_in">print</span>(data[<span class="string">&#x27;load&#x27;</span>][<span class="string">&#x27;dev_path&#x27;</span>])  <span class="comment"># =&gt; ~/data/spotify/dev</span></span><br><span class="line"><span class="built_in">print</span>(data[<span class="string">&#x27;store&#x27;</span>])  <span class="comment"># =&gt; checkpoints/spotify/3L8H/</span></span><br></pre></td></tr></table></figure>
+
+<p>Highly recommended to use <code>smartdict</code> along with <a href="https://liu.qijiong.work/2022/11/07/Oba-Converting-a-Python-iterable-object-to-an-attribute-class/">Oba</a>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> oba <span class="keyword">import</span> Obj</span><br><span class="line"></span><br><span class="line">data = Obj(data)</span><br><span class="line"><span class="built_in">print</span>(data.load.base_path)  <span class="comment"># =&gt; ~/data/spotify</span></span><br><span class="line"><span class="built_in">print</span>(data.load.dev_path)  <span class="comment"># =&gt; ~/data/spotify/dev</span></span><br><span class="line"><span class="built_in">print</span>(data.store)  <span class="comment"># =&gt; checkpoints/spotify/3L8H/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Full-Match-Referencing"><a href="#Full-Match-Referencing" class="headerlink" title="Full Match Referencing ${}$"></a>Full Match Referencing <code>$&#123;&#125;$</code></h3><p>In the Normal String Referencing <code>$&#123;&#125;</code> solution, the value of the configuration dictionary is a string. The reference is performed through a chain path (separated by <code>.</code>) within the <code>$&#123;&#125;</code> identifier.</p>
+<p>The Full Match Reference only allows the property value to be completely covered by the identifier <code>$&#123;&#125;$</code>. For example:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> oba</span><br><span class="line"><span class="keyword">import</span> smartdict</span><br><span class="line"></span><br><span class="line">data = <span class="built_in">dict</span>(</span><br><span class="line">    a=<span class="string">&#x27;$&#123;b.v.1&#125;+1&#x27;</span>,  <span class="comment"># Normal String Referencing</span></span><br><span class="line">    b=<span class="string">&#x27;$&#123;c&#125;$&#x27;</span>,  <span class="comment"># Full Match Referencing</span></span><br><span class="line">    c=<span class="built_in">dict</span>(</span><br><span class="line">        l=<span class="number">23</span>,</span><br><span class="line">        v=(<span class="string">&#x27;are&#x27;</span>, <span class="string">&#x27;you&#x27;</span>, <span class="string">&#x27;ok&#x27;</span>),</span><br><span class="line">    )</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">data = smartdict.parse(data)</span><br><span class="line"><span class="built_in">print</span>(data[<span class="string">&#x27;b&#x27;</span>])  <span class="comment"># =&gt; &#123;&#x27;l&#x27;: 23, &#x27;v&#x27;: (&#x27;are&#x27;, &#x27;you&#x27;, &#x27;ok&#x27;)&#125;</span></span><br><span class="line"></span><br><span class="line">data = oba.Obj(data)</span><br><span class="line"><span class="built_in">print</span>(data.a)  <span class="comment"># =&gt; you+1</span></span><br><span class="line"><span class="built_in">print</span>(data.b.l)  <span class="comment"># =&gt; 23</span></span><br></pre></td></tr></table></figure>
+
+<p>In which <code>b</code> is identical to <code>c</code> through the Full Match Reference.</p>
+<h3 id="Summon-Magic"><a href="#Summon-Magic" class="headerlink" title="Summon Magic"></a>Summon Magic</h3><p>Sometimes, we may wish to generate the path through timestamps or random numbers. We can first construct the following two classes:</p>
+<blockquote>
+<p>TimestampMagic</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TimestampMagic</span>(<span class="title class_ inherited__">dict</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">dict</span>.__init__(self, &#123;&#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__contains__</span>(<span class="params">self, item</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__getitem__</span>(<span class="params">self, item</span>):</span><br><span class="line">        now = datetime.datetime.now()</span><br><span class="line">        <span class="keyword">if</span> item == <span class="string">&#x27;str&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span> now.strftime(<span class="string">&#x27;%y%m%d-%H%M%S&#x27;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">hex</span>(<span class="built_in">int</span>(now.timestamp()))[<span class="number">2</span>:]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>RandomMagic</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RandomMagic</span>(<span class="title class_ inherited__">dict</span>):</span><br><span class="line">    chars = string.ascii_letters + string.digits</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">dict</span>.__init__(self, &#123;&#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__contains__</span>(<span class="params">self, item</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__getitem__</span>(<span class="params">self, item</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span>.join([random.choice(self.chars) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(item))])</span><br></pre></td></tr></table></figure>
+
+<p>Then, we can use the following configuration dictionary:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smartdict</span><br><span class="line"></span><br><span class="line">data = <span class="built_in">dict</span>(</span><br><span class="line">    filename=<span class="string">&#x27;$&#123;utils.time.str&#125;/$&#123;utils.rand.4&#125;.log&#x27;</span>,  <span class="comment"># Summon Magic, supported by smartdict&gt;=0.0.4</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">data.update(<span class="built_in">dict</span>(</span><br><span class="line">    utils=<span class="built_in">dict</span>(</span><br><span class="line">        rand=Rand(),</span><br><span class="line">        time=Timing(),</span><br><span class="line">    )</span><br><span class="line">))</span><br><span class="line">data = smartdict.parse(data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(data[<span class="string">&#x27;filename&#x27;</span>])  <span class="comment"># =&gt; 20221110-123504/to1E.log</span></span><br></pre></td></tr></table></figure>
+
+<p>The principle behind this is to override the class’s <code>[]</code> operator to make it behave the same as a dictionary or list.</p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT</p>
+<h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/Jyonn/smartdict">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://pypi.org/project/smartdict/">PyPI</a></li>
+<li><a href="https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/">Documentation</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582135889/">Chinese version</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/resume/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-number">2.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Usage"><span class="toc-number">3.</span> <span class="toc-text">Usage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Normal-String-Referencing"><span class="toc-number">3.1.</span> <span class="toc-text">Normal String Referencing ${}</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Full-Match-Referencing"><span class="toc-number">3.2.</span> <span class="toc-text">Full Match Referencing ${}$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Summon-Magic"><span class="toc-number">3.3.</span> <span class="toc-text">Summon Magic</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#License"><span class="toc-number">4.</span> <span class="toc-text">License</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Links"><span class="toc-number">5.</span> <span class="toc-text">Links</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&text=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&title=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&is_video=false&description=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=SmartDict: Dynamic pointing of values in Python dictionaries&body=Check out this article: https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&title=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&title=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&title=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&title=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&name=SmartDict: Dynamic pointing of values in Python dictionaries&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://liu.qijiong.work/2022/11/09/SmartDict-Dynamic-pointing-of-values-in-Python-dictionaries/&t=SmartDict: Dynamic pointing of values in Python dictionaries"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2023
+    Jyonn LIU
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/resume/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/projects/">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
