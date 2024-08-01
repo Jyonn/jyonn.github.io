@@ -1,7 +1,7 @@
 div.avatar {
   width:200px;
   height:200px;
-  background: url('/images/avatar.jpg') 50% 50% no-repeat;
+  background: url('/images/resume-avatar.jpg') 50% 50% no-repeat;
   background-size: cover;
   border-radius: 100px;
   margin: 0 auto 20px auto;
