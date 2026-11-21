@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Qijiong Liu | Scholar Page</title>
+    <link>https://liu.qijiong.work/projects/</link>
+    <description>Recent content in Projects on Qijiong Liu | Scholar Page</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 15 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://liu.qijiong.work/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Legommenders</title>
+      <link>https://liu.qijiong.work/projects/legommenders/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://liu.qijiong.work/projects/legommenders/</guid>
+      <description>A content-recommendation research library for the LLM era, designed for modularity, reuse, and expressive experimentation.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>刘奇煚 on 刘奇煚 | 学术主页</title>
+    <link>https://liu.qijiong.work/zh/</link>
+    <description>Recent content in 刘奇煚 on 刘奇煚 | 学术主页</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 15 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://liu.qijiong.work/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Legommenders</title>
+      <link>https://liu.qijiong.work/zh/projects/legommenders/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://liu.qijiong.work/zh/projects/legommenders/</guid>
+      <description>一个面向大模型时代的内容推荐研究库，强调模块化、可复用与实验表达力。</description>
+    </item>
+    <item>
+      <title>RecBench 之后，我更关心“模型会不会推荐”</title>
+      <link>https://liu.qijiong.work/zh/writing/recbench-%E4%B9%8B%E5%90%8E%E6%88%91%E6%9B%B4%E5%85%B3%E5%BF%83%E6%A8%A1%E5%9E%8B%E4%BC%9A%E4%B8%8D%E4%BC%9A%E6%8E%A8%E8%8D%90/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://liu.qijiong.work/zh/writing/recbench-%E4%B9%8B%E5%90%8E%E6%88%91%E6%9B%B4%E5%85%B3%E5%BF%83%E6%A8%A1%E5%9E%8B%E4%BC%9A%E4%B8%8D%E4%BC%9A%E6%8E%A8%E8%8D%90/</guid>
+      <description>做完大模型与传统推荐系统的比较评测之后，对“评测语言”和“评测对象”都有了新的警惕。</description>
+    </item>
+    <item>
+      <title>简历</title>
+      <link>https://liu.qijiong.work/zh/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://liu.qijiong.work/zh/resume/</guid>
+      <description>杭州电子科技大学计算机学院力行特聘教授、博士生导师，研究生成式推荐、模型评测与高效推理。</description>
+    </item>
+    <item>
+      <title>日历</title>
+      <link>https://liu.qijiong.work/zh/calendar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://liu.qijiong.work/zh/calendar/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

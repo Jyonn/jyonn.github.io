@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>项目 on 刘奇煚 | 学术主页</title>
+    <link>https://liu.qijiong.work/zh/projects/</link>
+    <description>Recent content in 项目 on 刘奇煚 | 学术主页</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 15 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://liu.qijiong.work/zh/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Legommenders</title>
+      <link>https://liu.qijiong.work/zh/projects/legommenders/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://liu.qijiong.work/zh/projects/legommenders/</guid>
+      <description>一个面向大模型时代的内容推荐研究库，强调模块化、可复用与实验表达力。</description>
+    </item>
+  </channel>
+</rss>

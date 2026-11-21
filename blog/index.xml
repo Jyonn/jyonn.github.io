@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writing on Qijiong Liu | Scholar Page</title>
+    <link>https://liu.qijiong.work/blog/</link>
+    <description>Recent content in Writing on Qijiong Liu | Scholar Page</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 15 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://liu.qijiong.work/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>After RecBench, I Care More About Whether Models Can Actually Recommend</title>
+      <link>https://liu.qijiong.work/writing/after-recbench-i-care-more-about-whether-models-can-actually-recommend/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://liu.qijiong.work/writing/after-recbench-i-care-more-about-whether-models-can-actually-recommend/</guid>
+      <description>Comparative evaluation made me more suspicious of fluent recommendation language and more careful about what the benchmark is truly measuring.</description>
+    </item>
+  </channel>
+</rss>
