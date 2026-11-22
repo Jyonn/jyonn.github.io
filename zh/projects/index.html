@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>项目 · 刘奇煚 | 学术主页</title>
-<meta name="description" content="刘奇煚的研究、论文、项目与学术履历。">
+<meta name="description" content="我开发或参与的推荐研究项目、开源工具和独立应用。">
 
 <meta name="generator" content="Hugo 0.160.1">
 
@@ -18,10 +18,13 @@
 
 
 
+    <link rel="stylesheet" href="/scss/pages/projects.min.ea45eb1b7cf12e9a3913dc8de020b6572ca821973da7ceef7dfb3ea9b3cc0980.css" integrity="sha256-6kXrG3zxLpo5E9yN4CC2VyyoIZc9p87vffs&#43;qbPMCYA=">
+
+
 </head>
 <body class="theme-shell section-projects">
     <div class="site-noise" aria-hidden="true"></div>
-    
+
 
 
 <header class="site-header" role="banner">
@@ -39,28 +42,28 @@
 
         <div class="header-panel" data-nav-panel>
             <nav class="site-nav" id="primary-nav" aria-label="主导航">
-                
+
                     <a class="site-nav__link" href="/zh/#research">研究</a>
-                
+
                     <a class="site-nav__link" href="/zh/#papers">论文</a>
-                
+
                     <a class="site-nav__link is-active" href="/zh/projects/">项目</a>
-                
+
                     <a class="site-nav__link" href="/zh/#experience">经历</a>
-                
+
                     <a class="site-nav__link" href="/zh/resume/">简历</a>
-                
-                
-                    
+
+
+
                         <a class="site-nav__link" href="/zh/calendar/">日历</a>
-                    
-                
+
+
             </nav>
         </div>
         <div class="header-tools">
-            
+
                 <a class="language-switch" href="/projects/" hreflang="en-US" aria-label="语言: English"><span lang="en-US">EN</span></a>
-            
+
             <button class="nav-toggle" type="button" aria-label="导航菜单" aria-expanded="false" aria-controls="primary-nav">
                 <span></span>
                 <span></span>
@@ -71,49 +74,1308 @@
 </header>
 
     <main class="site-main" id="main-content">
-        
 
 
-<section class="page-hero">
-    <div class="page-hero__inner">
-        <p class="page-hero__kicker">项目</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="project-catalog" data-project-catalog>
+    <header class="project-catalog__hero">
         <h1>项目</h1>
-        <p class="page-hero__summary">更偏研究基础设施、实验系统与可复用工具的工作。</p>
-        <div class="prose page-hero__copy"><p>我喜欢那些既能支撑论文、又能独立服务于社区的小型研究系统。项目页主要收录这类工作。</p>
+        <p>我开发或参与的推荐研究项目、开源工具和独立应用。</p>
+    </header>
+
+    <div class="project-catalog__filters" data-project-filters hidden>
+        <div class="project-catalog__categories" role="group" aria-label="项目分类">
+            <button type="button" data-project-category="" aria-pressed="true">全部项目</button>
+
+                <button type="button" data-project-category="recommendation" aria-pressed="false">推荐项目</button>
+
+                <button type="button" data-project-category="tools" aria-pressed="false">开源工具</button>
+
+                <button type="button" data-project-category="apps" aria-pressed="false">独立应用</button>
+
+        </div>
+        <div class="project-catalog__fields">
+            <label>
+                <span>主题标签</span>
+                <select data-project-tag>
+                    <option value="">全部标签</option>
+
+                        <option value="ios">iOS</option>
+
+                        <option value="python">Python</option>
+
+                        <option value="pytorch">PyTorch</option>
+
+                        <option value="unicode">Unicode</option>
+
+                        <option value="security">安全</option>
+
+                        <option value="creative">创作工具</option>
+
+                        <option value="llm">大语言模型</option>
+
+                        <option value="backend">后端开发</option>
+
+                        <option value="ml">机器学习</option>
+
+                        <option value="finance">记账</option>
+
+                        <option value="education">教育</option>
+
+                        <option value="framework">框架</option>
+
+                        <option value="offline">离线使用</option>
+
+                        <option value="zero-shot">零样本</option>
+
+                        <option value="cli">命令行</option>
+
+                        <option value="config">配置</option>
+
+                        <option value="benchmark">评测基准</option>
+
+                        <option value="frontend">前端开发</option>
+
+                        <option value="calendar">日历</option>
+
+                        <option value="social">社交</option>
+
+                        <option value="photography">摄影</option>
+
+                        <option value="generative">生成式推荐</option>
+
+                        <option value="lab">实验室工具</option>
+
+                        <option value="data">数据处理</option>
+
+                        <option value="datasets">数据集</option>
+
+                        <option value="recsys">推荐系统</option>
+
+                        <option value="web">网页应用</option>
+
+                        <option value="files">文件管理</option>
+
+                        <option value="collaboration">协作</option>
+
+                        <option value="serialization">序列化</option>
+
+                        <option value="games">游戏</option>
+
+                        <option value="language">语言</option>
+
+                        <option value="devops">运维</option>
+
+                </select>
+            </label>
+            <label>
+                <span>搜索项目</span>
+                <input type="search" data-project-search>
+            </label>
+            <div class="project-catalog__controls">
+                <button type="button" data-project-reset>重置筛选</button>
+                <p class="project-catalog__count" role="status" aria-live="polite" aria-atomic="true">
+                    匹配项目数 <strong data-project-count></strong>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p class="project-catalog__empty" data-project-empty hidden>没有匹配的项目，可以换一个分类、标签或关键词。</p>
+
+
+
+            <section class="project-catalog__group project-catalog__group--recommendation" data-project-group="recommendation" aria-labelledby="projects-recommendation">
+                <header class="project-catalog__group-title">
+                    <h2 id="projects-recommendation">推荐项目</h2>
+                </header>
+                <div class="project-catalog__entries">
+
+
+
+
+
+                        <article id="project-legommenders" class="project-catalog__entry" data-project-entry data-project-keywords="Legommenders  A modular PyTorch library for building and evaluating content-based recommender systems with language-model support. Swap item encoders, user-history models, and scoring modules within one training pipeline, with an xMIND walkthrough for multilingual news recommendation. Recommender systems Frameworks PyTorch Large language models" data-project-tags="recsys framework pytorch llm">
+                            <div class="project-catalog__entry-heading">
+                                <h3>Legommenders</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">面向内容推荐研究的模块化 PyTorch 库，支持用语言模型构建和评测推荐系统。</p>
+                            <p class="project-catalog__detail">在同一套训练流程中替换物品编码器、用户行为建模模块和打分模块，并可通过 xMIND 教程跑通多语言新闻推荐实验。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>推荐系统</li><li>框架</li><li>PyTorch</li><li>大语言模型</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+
+
+
+
+                                            <a href="/zh/projects/legommenders/">项目详情 <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/Legommenders">GitHub <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/Legommenders/blob/master/handbook/training-on-xmind-dataset.md">文档 <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://dl.acm.org/doi/10.1145/3701716.3715305">论文 <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-recbench" class="project-catalog__entry" data-project-entry data-project-keywords="RecBench  A benchmark for comparing large language models with conventional recommenders on click-through rate prediction and sequential recommendation. Compare item representations in RecBench, then use its RecBench-MD extension to evaluate how models transfer across datasets and domains. Recommender systems Benchmarks Datasets Large language models" data-project-tags="recsys benchmark datasets llm">
+                            <div class="project-catalog__entry-heading">
+                                <h3>RecBench</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">面向点击率预测和序列推荐的评测基准，用于比较大语言模型与传统推荐系统。</p>
+                            <p class="project-catalog__detail">可在 RecBench 中比较不同的物品表示方式，再用扩展项目 RecBench-MD 评估模型在不同数据集与领域之间的迁移能力。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>推荐系统</li><li>评测基准</li><li>数据集</li><li>大语言模型</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/RecBench">GitHub <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://www.kaggle.com/datasets/qijiong/recbench/">数据集 <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/RecBench-MD">RecBench-MD <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/129292da836f35bc051ccef07a245ab7-Abstract-Datasets_and_Benchmarks_Track.html">论文 <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-recbase" class="project-catalog__entry" data-project-entry data-project-keywords="RecBase  A collaborative research project that pretrains a generative foundation model for zero-shot recommendation across domains. RecBase encodes items as hierarchical concept identifiers and learns to predict the next item from interaction sequences spanning multiple domains. Recommender systems Generative recommendation Zero-shot Large language models" data-project-tags="recsys generative zero-shot llm">
+                            <div class="project-catalog__entry-heading">
+                                <h3>RecBase</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">合作研发的生成式推荐基础模型，通过预训练支持跨领域零样本推荐。</p>
+                            <p class="project-catalog__detail">RecBase 把物品编码为分层概念标识符，并从多个领域的用户交互序列中学习预测下一项物品。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>推荐系统</li><li>生成式推荐</li><li>零样本</li><li>大语言模型</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://aclanthology.org/2025.emnlp-main.786/">论文 <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/reczoo/RecBase">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+                </div>
+            </section>
+
+
+
+            <section class="project-catalog__group project-catalog__group--tools" data-project-group="tools" aria-labelledby="projects-tools">
+                <header class="project-catalog__group-title">
+                    <h2 id="projects-tools">开源工具</h2>
+                </header>
+                <div class="project-catalog__entries">
+
+
+
+
+
+                        <article id="project-unitok" class="project-catalog__entry" data-project-entry data-project-keywords="UniTok  A preprocessing library for machine learning datasets that contain text, categorical features, and numerical values. Choose a tokenizer for each column and share vocabularies across datasets that use the same features. Python Machine learning Data processing" data-project-tags="python ml data">
+                            <div class="project-catalog__entry-heading">
+                                <h3>UniTok</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">面向机器学习数据集的预处理库，统一处理文本、类别和数值特征。</p>
+                            <p class="project-catalog__detail">可为每一列指定分词或编码方式，并让使用相同特征的数据集共享词表。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>Python</li><li>机器学习</li><li>数据处理</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://unitok.qijiong.work/">文档 <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/unitok/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-autoencoders" class="project-catalog__entry" data-project-entry data-project-keywords="autoencoders  A PyTorch toolkit for researchers building deterministic, variational, and quantized autoencoders. Use the same API to train models from different families and save checkpoints for reuse in later experiments. Machine learning PyTorch Python" data-project-tags="ml pytorch python">
+                            <div class="project-catalog__entry-heading">
+                                <h3>autoencoders</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">面向表征学习研究的 PyTorch 工具库，涵盖确定性、变分和量化自编码器。</p>
+                            <p class="project-catalog__detail">可通过统一接口训练不同类型的模型，保存检查点并在后续实验中复用。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>机器学习</li><li>PyTorch</li><li>Python</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/autoencoders/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/autoencoders">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-gpuops" class="project-catalog__entry" data-project-entry data-project-keywords="GPUOps  A command-line tool for research teams that share GPU servers. Identify which users and processes occupy each GPU, check its memory and utilization, and record GPU-hours over time. CLI Lab tools DevOps" data-project-tags="cli lab devops">
+                            <div class="project-catalog__entry-heading">
+                                <h3>GPUOps</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">面向科研团队的共享 GPU 运维命令行工具。</p>
+                            <p class="project-catalog__detail">可查看每张显卡的占用用户、进程、显存和利用率，并记录和汇总 GPU 使用时长。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>命令行</li><li>实验室工具</li><li>运维</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/gpuops/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/gpuops">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-smartdict" class="project-catalog__entry" data-project-entry data-project-keywords="SmartDict  A Python library for resolving references between fields in nested data structures. Reuse a value in several derived fields, provide defaults for missing values, and detect circular references. Python Configuration Data processing" data-project-tags="python config data">
+                            <div class="project-catalog__entry-heading">
+                                <h3>SmartDict</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">解析嵌套数据结构中字段引用的 Python 库。</p>
+                            <p class="project-catalog__detail">可让多个派生字段引用同一个值，为缺失值提供默认值，并检测循环引用。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>Python</li><li>配置</li><li>数据处理</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/smartdict/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/smartdict">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-refconfig" class="project-catalog__entry" data-project-entry data-project-keywords="RefConfig  A configuration loader built on SmartDict for assembling experiments from reusable settings files. Keep dataset and training settings in separate files and use values from both to generate a checkpoint path. Python Configuration" data-project-tags="python config">
+                            <div class="project-catalog__entry-heading">
+                                <h3>RefConfig</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">基于 SmartDict 的配置加载工具，支持用可复用的配置文件组装实验。</p>
+                            <p class="project-catalog__detail">可将数据集和训练参数分别写入不同文件，再引用两者的字段生成检查点路径。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>Python</li><li>配置</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/refconfig/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/RefConfig">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-nestify" class="project-catalog__entry" data-project-entry data-project-keywords="Nestify  A Python utility that turns flat dictionaries with path-like keys into nested structures. Expand keys such as user.profile.name and choose what happens when a path conflicts with an existing value. Python Data processing Configuration" data-project-tags="python data config">
+                            <div class="project-catalog__entry-heading">
+                                <h3>Nestify</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">将带路径式键名的扁平字典转换为嵌套结构的 Python 工具。</p>
+                            <p class="project-catalog__detail">可展开 user.profile.name 这类路径式键名，并指定路径与已有值冲突时的处理方式。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>Python</li><li>数据处理</li><li>配置</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/nestify/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/nestify">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-oba" class="project-catalog__entry" data-project-entry data-project-keywords="Oba  A Python utility that wraps dictionaries and other containers for attribute-style access. Read and update nested fields with dot notation, then retrieve the resulting data as ordinary Python containers. Python Data processing" data-project-tags="python data">
+                            <div class="project-catalog__entry-heading">
+                                <h3>Oba</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">为字典等容器提供属性式访问的 Python 工具。</p>
+                            <p class="project-catalog__detail">可用点号读取和修改嵌套字段，再取出普通的 Python 容器。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>Python</li><li>数据处理</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/oba/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/Oba">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-diq" class="project-catalog__entry" data-project-entry data-project-keywords="Diq  A Python serializer that turns class instances into dictionaries for API responses and data export. Select and rename exported fields or define a custom representation for an individual attribute. Python Serialization Backend" data-project-tags="python serialization backend">
+                            <div class="project-catalog__entry-heading">
+                                <h3>Diq</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">将类实例转换为字典的 Python 序列化工具，适用于 API 响应和数据导出。</p>
+                            <p class="project-catalog__detail">可选取和重命名导出字段，也可为单个属性自定义序列化结果。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>Python</li><li>序列化</li><li>后端开发</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/diq/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/Diq">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-smartdjango" class="project-catalog__entry" data-project-entry data-project-keywords="SmartDjango  A set of utilities for developers building Django APIs. Validate request arguments, standardize error responses, and use ORM helpers to write common queries. Python Backend" data-project-tags="python backend">
+                            <div class="project-catalog__entry-heading">
+                                <h3>SmartDjango</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">面向 Django API 开发者的工具集。</p>
+                            <p class="project-catalog__detail">可校验请求参数、统一错误响应格式，并用 ORM 辅助函数编写常见查询。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>Python</li><li>后端开发</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/smartdjango/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/SmartDjango">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-notificator" class="project-catalog__entry" data-project-entry data-project-keywords="Notificator  A Python SDK for applications that send notifications across several channels. Prepare email, SMS, and webhook deliveries, then submit them together through one API request. Python Backend DevOps" data-project-tags="python backend devops">
+                            <div class="project-catalog__entry-heading">
+                                <h3>Notificator</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">帮助应用接入多渠道通知的 Python SDK。</p>
+                            <p class="project-catalog__detail">可分别准备邮件、短信和 Webhook 通知，再用一次 API 请求统一提交。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>Python</li><li>后端开发</li><li>运维</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/notificator/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/notificator">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-certbuddy" class="project-catalog__entry" data-project-entry data-project-keywords="CertBuddy  A tool for operators who manage HTTPS certificates across Tencent Cloud and Qiniu Cloud. Apply for certificates using Tencent Cloud DNS validation, then deploy them to Qiniu Cloud and renew expiring certificates. Python CLI DevOps" data-project-tags="python cli devops">
+                            <div class="project-catalog__entry-heading">
+                                <h3>CertBuddy</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">面向腾讯云与七牛云运维人员的 HTTPS 证书管理工具。</p>
+                            <p class="project-catalog__detail">可通过腾讯云 DNS 验证申请证书，将证书部署到七牛云，并续期即将到期的证书。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>Python</li><li>命令行</li><li>运维</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/CertBuddy">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-pigmento" class="project-catalog__entry" data-project-entry data-project-keywords="Pigmento  A Python utility for colorizing terminal output and tracing where messages come from. Show the calling function or method as a styled prefix so that you can distinguish messages from different parts of a program. Python CLI" data-project-tags="python cli">
+                            <div class="project-catalog__entry-heading">
+                                <h3>Pigmento</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">为终端输出着色并标明消息来源的 Python 工具。</p>
+                            <p class="project-catalog__detail">可把调用函数或方法显示为带样式的前缀，便于区分程序各处的输出。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>Python</li><li>命令行</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/pigmento/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/Pigmento">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-imagegrid" class="project-catalog__entry" data-project-entry data-project-keywords="ImageGrid  A browser-based image layout library for building galleries and collages. Arrange images of different aspect ratios into a responsive grid, preview the layout online, and export it as a PNG. Frontend Creative tools" data-project-tags="frontend creative">
+                            <div class="project-catalog__entry-heading">
+                                <h3>ImageGrid</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">面向相册与拼图场景的浏览器图片排版库。</p>
+                            <p class="project-catalog__detail">可将宽高比不同的图片排成自适应网格，在线预览布局并导出 PNG。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>前端开发</li><li>创作工具</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://grid.6-79.cn/">演示 <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/ImageGrid">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-lemoji" class="project-catalog__entry" data-project-entry data-project-keywords="lEmoji  A Python package that provides emoji lists by Unicode Emoji version. Import the emoji list for a specific version to match the version your application targets. Python Unicode Data processing" data-project-tags="python unicode data">
+                            <div class="project-catalog__entry-heading">
+                                <h3>lEmoji</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">按 Unicode Emoji 版本提供表情列表的 Python 包。</p>
+                            <p class="project-catalog__detail">可导入指定版本的表情列表，与应用支持的版本保持一致。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>Python</li><li>Unicode</li><li>数据处理</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/lEmoji/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://github.com/Jyonn/lemoji">GitHub <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+                </div>
+            </section>
+
+
+
+            <section class="project-catalog__group project-catalog__group--apps" data-project-group="apps" aria-labelledby="projects-apps">
+                <header class="project-catalog__group-title">
+                    <h2 id="projects-apps">独立应用</h2>
+                </header>
+                <div class="project-catalog__entries">
+
+
+
+
+
+                        <article id="project-chronelle" class="project-catalog__entry" data-project-entry data-project-keywords="Chronelle Chronelle · 时序 A calendar for organizing your week and coordinating events with other people. Invite people to events or share a visitor view, like the read-only weekly calendar on this site. Calendar Collaboration iOS" data-project-tags="calendar collaboration ios">
+                            <div class="project-catalog__entry-heading">
+                                <h3>Chronelle · 时序</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">用来安排一周日程、与他人协调时间的日历。</p>
+                            <p class="project-catalog__detail">可以邀请他人参加日程，也可以共享访客视图，本站的只读周历就是一例。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>日历</li><li>协作</li><li>iOS</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://chronelle.jyonn.space/">网站 <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+
+
+
+
+                                            <a href="/zh/calendar/">演示 <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-frienden" class="project-catalog__entry" data-project-entry data-project-keywords="Frienden Frienden · 友间 A messaging app that organizes conversations with friends into shared spaces. Use private or group chats inside a space and use the same account to sign in to Pocklo and StillFolio. Social Collaboration Web" data-project-tags="social collaboration web">
+                            <div class="project-catalog__entry-heading">
+                                <h3>Frienden · 友间</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">以朋友和共享空间组织会话的即时通信应用。</p>
+                            <p class="project-catalog__detail">可以在空间里私聊或群聊，也能用同一账号登录小兜和留幅。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>社交</li><li>协作</li><li>网页应用</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://frienden.jyonn.space/">网站 <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-stillfolio" class="project-catalog__entry" data-project-entry data-project-keywords="StillFolio StillFolio · 留幅 A workspace for photographers to organize albums and publish portfolios. Edit albums offline, then publish a shareable copy and revoke its link whenever you choose. Photography Creative tools Offline" data-project-tags="photography creative offline">
+                            <div class="project-catalog__entry-heading">
+                                <h3>StillFolio · 留幅</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">面向摄影创作者的相册整理和作品集发布工作台。</p>
+                            <p class="project-catalog__detail">可以离线编辑相册，联网后发布可分享的副本，也可以随时撤销链接。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>摄影</li><li>创作工具</li><li>离线使用</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://stillfolio.jyonn.space/">网站 <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-pocklo" class="project-catalog__entry" data-project-entry data-project-keywords="Pocklo Pocklo · 小兜 A file workspace you can access from the browser or the command line. Upload a local folder from the terminal while preserving its directory structure in the web workspace. Files Web CLI" data-project-tags="files web cli">
+                            <div class="project-catalog__entry-heading">
+                                <h3>Pocklo · 小兜</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">可以在浏览器和命令行里使用的文件工作区。</p>
+                            <p class="project-catalog__detail">在终端里上传本地文件夹，网页端会保留原有的目录结构。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>文件管理</li><li>网页应用</li><li>命令行</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://pocklo.jyonn.space/">网站 <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://pocklo.jyonn.space/cli/">命令行指南 <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-monifa" class="project-catalog__entry" data-project-entry data-project-keywords="Monifa Monifa · 时符 An authenticator for managing time-based one-time codes on the web and in the terminal. The CLI can generate codes for previously synchronized accounts while offline. Security CLI Offline" data-project-tags="security cli offline">
+                            <div class="project-catalog__entry-heading">
+                                <h3>Monifa · 时符</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">可以在网页和终端管理动态验证码的身份验证器。</p>
+                            <p class="project-catalog__detail">离线时，命令行仍能为此前同步过的账户生成验证码。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>安全</li><li>命令行</li><li>离线使用</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://monifa.jyonn.space/">网站 <span aria-hidden="true">↗</span></a>
+
+
+
+
+
+
+
+                                            <a href="https://pypi.org/project/monifa/">PyPI <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-hiphop" class="project-catalog__entry" data-project-entry data-project-keywords="Hiphop 冰山押韵 A Chinese rhyme finder for lyricists and writers. Enter a word or phrase to find matches that rhyme across two or more syllables. Language Creative tools Web" data-project-tags="language creative web">
+                            <div class="project-catalog__entry-heading">
+                                <h3>冰山押韵</h3>
+
+                            </div>
+                            <p class="project-catalog__summary">为填词人和中文写作者查找押韵词的工具。</p>
+                            <p class="project-catalog__detail">输入一个词或短语，就能查找二押及以上的候选。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>语言</li><li>创作工具</li><li>网页应用</li>
+                            </ul>
+
+                                <div class="project-catalog__links">
+
+
+
+
+
+
+                                            <a href="https://hiphop.6-79.cn/">网站 <span aria-hidden="true">↗</span></a>
+
+
+                                </div>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-drop" class="project-catalog__entry" data-project-entry data-project-keywords="Drop Drop · 一滴 A private journal for capturing everyday moments by voice or text. After recording, review the transcript and an edited version before choosing what to save. iOS Creative tools Web" data-project-tags="ios creative web">
+                            <div class="project-catalog__entry-heading">
+                                <h3>Drop · 一滴</h3>
+                                <span class="project-catalog__preview">项目预览</span>
+                            </div>
+                            <p class="project-catalog__summary">用语音或文字记录日常片段的私人日记。</p>
+                            <p class="project-catalog__detail">录音完成后可以预览转写原文和整理版，再选择要保存的内容。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>iOS</li><li>创作工具</li><li>网页应用</li>
+                            </ul>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-facultykit" class="project-catalog__entry" data-project-entry data-project-keywords="FacultyKit FacultyKit · 校集 A WeChat mini program for routine faculty tasks at Hangzhou Dianzi University. Its first tool looks up travel allowances by destination and date and shows the breakdown by day. Education Finance" data-project-tags="education finance">
+                            <div class="project-catalog__entry-heading">
+                                <h3>FacultyKit · 校集</h3>
+                                <span class="project-catalog__preview">项目预览</span>
+                            </div>
+                            <p class="project-catalog__summary">面向杭州电子科技大学教师的日常事务微信小程序。</p>
+                            <p class="project-catalog__detail">首个工具支持按出差地点和日期查询标准，并查看逐日明细。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>教育</li><li>记账</li>
+                            </ul>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-tally" class="project-catalog__entry" data-project-entry data-project-keywords="Tally 有数 Tally A shared ledger for groups that track expenses and assets across currencies. Record expenses and transfers in a shared ledger, then review suggested settlements. Finance Collaboration Web" data-project-tags="finance collaboration web">
+                            <div class="project-catalog__entry-heading">
+                                <h3>有数 Tally</h3>
+                                <span class="project-catalog__preview">项目预览</span>
+                            </div>
+                            <p class="project-catalog__summary">用于多人协作管理不同币种的支出与资产的账本。</p>
+                            <p class="project-catalog__detail">在共享账本里记录支出和转账，再查看结算建议。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>记账</li><li>协作</li><li>网页应用</li>
+                            </ul>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-flexgo" class="project-catalog__entry" data-project-entry data-project-keywords="FlexGo  A browser-based Go studio for designing custom boards and playing on them. Design a board in the editor and use it in a game with Chinese, Japanese, or Korean scoring. Games Creative tools Web" data-project-tags="games creative web">
+                            <div class="project-catalog__entry-heading">
+                                <h3>FlexGo</h3>
+                                <span class="project-catalog__preview">项目预览</span>
+                            </div>
+                            <p class="project-catalog__summary">可以自定义棋盘并直接对弈的网页围棋工坊。</p>
+                            <p class="project-catalog__detail">在编辑器里设计棋盘后，可以选用中国、日本或韩国规则对局。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>游戏</li><li>创作工具</li><li>网页应用</li>
+                            </ul>
+
+                        </article>
+
+
+
+
+
+                        <article id="project-hanzi" class="project-catalog__entry" data-project-entry data-project-keywords="Hanzi  A workbench for collecting Chinese characters and reviewing their component breakdowns. A collection and decomposition pipeline feeds a browser workspace for manual review. Language Web" data-project-tags="language web">
+                            <div class="project-catalog__entry-heading">
+                                <h3>Hanzi</h3>
+                                <span class="project-catalog__preview">项目预览</span>
+                            </div>
+                            <p class="project-catalog__summary">用于采集汉字并审核部件拆分结果的工作台。</p>
+                            <p class="project-catalog__detail">采集与拆分脚本生成初步结果，再交由网页工作台人工复核。</p>
+                            <ul class="project-catalog__tags" aria-label="主题标签">
+                                <li>语言</li><li>网页应用</li>
+                            </ul>
+
+                        </article>
+
+                </div>
+            </section>
+
+
 </div>
-    </div>
-</section>
-
-<section class="story-list">
-    
-        <article class="story-card">
-            <div class="story-card__meta">
-                <span>2026.06.15</span>
-                <span>维护中</span>
-                <span>项目负责人</span>
-            </div>
-            <div class="story-card__body">
-                <h2><a href="/zh/projects/legommenders/">Legommenders</a></h2>
-                <p>一个面向大模型时代的内容推荐研究库，强调模块化、可复用与实验表达力。</p>
-                
-                
-    <div class="link-cluster">
-        <a class="signal-link" href="https://github.com/Jyonn/Legommenders" target="_blank" rel="noopener">GitHub</a>
-        
-        
-        <a class="signal-link" href="https://dl.acm.org/doi/10.1145/3701716.3715305" target="_blank" rel="noopener">论文</a>
-        
-        
-    </div>
 
 
-            </div>
-        </article>
-    
-</section>
+<script src="/js/project-catalog.min.ce995c3eff4ff975062476b5698085f80e1f70e062a3de8920b64b377ba4b432.js" integrity="sha256-zplcPv9P&#43;XUGJHa1aYCF&#43;A4fcOBio96JILZLN3uktDI=" defer></script>
 
     </main>
-    
+
 <footer class="site-footer">
     <div class="site-footer__inner">
         <div class="site-footer__title">
@@ -121,24 +1383,24 @@
             <small>杭州电子科技大学</small>
         </div>
         <div class="site-footer__links">
-            
+
                 <a href="https://scholar.google.com/citations?hl=en&amp;user=_Xq5M5AAAAAJ">Google Scholar</a>
-            
+
                 <a href="https://github.com/Jyonn">GitHub</a>
-            
+
                 <a href="https://dblp.org/pid/244/2483.html">DBLP</a>
-            
+
                 <a href="https://orcid.org/0000-0001-6087-383X">ORCID</a>
-            
+
                 <a href="https://www.linkedin.com/in/jyonn/">LinkedIn</a>
-            
+
                 <a href="mailto:liu@qijiong.work">Email</a>
-            
+
         </div>
     </div>
 </footer>
 
-    
+
     <script src="/js/site.min.cc987b05554db08cdc4b271638205b592a3a9a3a026346d60dd85d95f64ae3db.js" integrity="sha256-zJh7BVVNsIzcSycWOCBbWSo6mjoCY0bWDdhdlfZK49s=" defer></script>
 </body>
 </html>
